@@ -1,4 +1,5 @@
 const Router = require('koa-router');
+const Station = require('./station.model');
 
 let router = new Router({
     prefix: '/api/stations'
@@ -7,7 +8,8 @@ let router = new Router({
 router
   .get('/', async (ctx) => {
     try {
-      ctx.body = {data:'', code: 200};
+      const stations = await Station.find({});
+      ctx.body = {data:stations, code: 200};
     } catch(err) {
       throw err
     }

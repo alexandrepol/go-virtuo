@@ -12,7 +12,7 @@ var carSchema = mongoose.Schema({
       default: true
     },
     station: { 
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: [true, 'Station is required'],
       ref: 'Station'
     },
