@@ -1,0 +1,25 @@
+{
+  "name": "go-virtuo",
+  "version": "1.0.0",
+  "description": "Koa.JS / Mongoose / Mocha REST API CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrepol/go-virtuo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandrepol/go-virtuo/issues"
+  },
+  "homepage": "https://github.com/alexandrepol/go-virtuo#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "mocha": "^6.1.4",
+    "mongoose": "^5.5.13"
+  }
+}
