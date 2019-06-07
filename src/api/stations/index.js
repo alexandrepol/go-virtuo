@@ -56,7 +56,7 @@ router
       if(!name){
         ctx.throw(404, 'Name is missing!'); 
       };
-      
+
       const selectedStation = await Station
         .findById(id);
       
@@ -65,7 +65,7 @@ router
       const modifiedStation = Station.where({ _id: id }).update({ $set: { name:  ctx.request.body.name }});
 
       ctx.status = 200;
-      ctx.body = {station: selectedStation._id, code: 200};
+      ctx.body = {success: true, code: 200};
     } catch(err) {
       throw err
     }
@@ -73,7 +73,7 @@ router
   // Delete station by ID
   .delete('/:id', async (ctx) => {
     try {
-      const selectedStation = await Station.findById({_id: ctx.params.id});
+      const selectedStation = await Station.findById(ctx.params.id);
 
       if (!selectedStation) { ctx.throw(404, 'Station not found') };
 
